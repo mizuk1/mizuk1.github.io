@@ -41,7 +41,7 @@ p {
     font-size: 20px;
 }
 
-main iframe {
+iframe {
     margin: auto;
     display: block;
 }
