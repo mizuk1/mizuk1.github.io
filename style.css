@@ -22,17 +22,6 @@ body {
     border-radius: 1.5em;
 }
 
-/* Header styling */
-
-header {
-    object-fit: cover;
-}
-
-header img {
-    width: 100%;
-    vertical-align: middle;
-}
-
 /* main section */
 h1 {
     margin-block-start: 20px;
@@ -51,15 +40,6 @@ video {
     margin: auto;
     display: block;
     border-radius: 1em;
-}
-
-/* footer section */
-
-footer {
-    min-height: 70px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
 }
 
 #imagem-instagram {
