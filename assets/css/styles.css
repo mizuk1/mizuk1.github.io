@@ -1,0 +1,99 @@
+body {
+  background: #f3f4f5;
+}
+
+.navbar {
+  background: rgba(241, 242, 244, 0.8);
+  border-bottom-width: 1px;
+  border-bottom-color: #dfe3e7;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 18px;
+}
+
+#carousel-1 {
+}
+
+section {
+}
+
+h1 {
+}
+
+.card-body {
+}
+
+@media (min-width: 300px) {
+  .card-body {
+    height: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-body {
+    height: 340px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-body {
+    height: 475px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-body {
+    height: 342px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-body {
+    height: 316px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card-body {
+    height: 262px;
+  }
+}
+
+@media (min-width: 768px) {
+  div {
+  }
+}
+
+@media (min-width: 576px) {
+  div {
+  }
+}
+
+.card-body-bottom {
+  height: auto;
+}
+
+img {
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.img-card {
+  border-radius: 20px;
+}
+
+.cards-shadown.cards-hover {
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+@media (min-width: 1200px) {
+  #carousel-1 {
+    height: calc(100vh - 102px);
+  }
+}
+
