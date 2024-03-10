@@ -1,5 +1,6 @@
 body {
   background: #f3f4f5;
+  font-family: Teko, sans-serif;
 }
 
 .navbar {
@@ -8,7 +9,8 @@ body {
   border-bottom-color: #dfe3e7;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  font-size: 18px;
+  font-family: Heebo, sans-serif;
+  line-height: 16px;
 }
 
 #carousel-1 {
@@ -59,16 +61,6 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
-  div {
-  }
-}
-
-@media (min-width: 576px) {
-  div {
-  }
-}
-
 .card-body-bottom {
   height: auto;
 }
@@ -88,12 +80,66 @@ img {
 }
 
 .navbar-brand {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 @media (min-width: 1200px) {
   #carousel-1 {
-    height: calc(100vh - 102px);
+    height: calc(100vh - 70px);
+  }
+}
+
+.nav-item {
+}
+
+#navcol-1 {
+  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-right: 26px;
+    font-family: Heebo, sans-serif;
+    font-size: 30PX;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-item {
+    margin-right: 12px;
+  }
+}
+
+.sub-h4-card {
+  font-size: 28px;
+}
+
+.cardbody-sub-text {
+  font-family: Heebo, sans-serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+.column-div-border {
+  border-bottom: 1px solid var(--bs-emphasis-color) ;
+}
+
+@media (min-width: 768px) {
+  .column-div-border {
+    border-right: 1px solid var(--bs-emphasis-color) ;
+    border-bottom-style: none;
+  }
+}
+
+h2 {
+  font-family: Teko, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  #navcol-1 {
+    font-size: 16px;
   }
 }
 
