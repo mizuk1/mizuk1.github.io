@@ -35,16 +35,11 @@ main {
     width: auto;
 }
 
-.header-nav .nav-link {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #fff;
-    padding: 0.25rem 0;
-}
-
-.header-nav .nav-link:hover,
-.header-nav .nav-link:focus {
-    color: var(--bs-secondary);
+/* Center logo on smaller screens; left-aligned on md+ */
+@media (max-width: 767.98px) {
+    .header-bg .container {
+        justify-content: center;
+    }
 }
 
 /* ---------- Hero ---------- */
