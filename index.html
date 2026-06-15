@@ -22,8 +22,12 @@
 
     <!-- ========== HEADER ========== -->
     <header>
-        <nav class="navbar navbar-expand-md bg-transparent py-3 header-bg" style="background: linear-gradient(#000f16, rgba(255,255,255,0) 100%);">
-            <div class="container"><a class="navbar-brand d-flex align-items-center m-auto m-md-0" href="#"><img class="img-fluid d-flex w-50 m-auto m-md-0" width="547" height="107" src="img/LOGO-TORNEIO-NEXT-LEVEL.png"></a></div>
+        <nav class="navbar navbar-expand-md navbar-dark header-bg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="header-logo img-fluid" src="img/LOGO-TORNEIO-NEXT-LEVEL.png" alt="Torneio Next Level" width="284" height="56">
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -31,16 +35,498 @@
     <main>
 
         <!-- Section 1: Hero / Intro -->
-        <section class="text-white py-4 py-xl-5">
-            <div class="container">
-                <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="height: 500px;"><img class="img-fluid object-fit-contain d-md-none w-100 h-100 mb-0 pb-0" width="693" height="997" src="img/trofeu.png">
-                    <div class="row mt-0 pt-0">
-                        <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center mx-auto">
-                            <div>
-                                <h1 class="text-uppercase fw-bold mb-3">Biben dum<br>fringi dictum, augue purus</h1>
-                                <p class="mb-4">Etiam a rutrum, mauris lectus aptent convallis. Fusce vulputate aliquam, sagittis odio metus. Nulla porttitor vivamus viverra laoreet, aliquam netus.</p>
-                            </div>
+        <section class="hero-section text-white py-4 py-xl-5">
+            <img class="hero-bg-glow" src="img/glow-ellipse.png" alt="" aria-hidden="true">
+            <img class="hero-trophy-bg d-none d-md-block" src="img/ouro02.png" alt="" aria-hidden="true">
+            <div class="container position-relative">
+                <div class="border rounded border-0 d-flex flex-column justify-content-center hero-container p-4 py-5">
+                    <!-- Mobile trophy -->
+                    <img class="img-fluid object-fit-contain d-md-none w-100 mb-0" src="img/trofeu.png" alt="Troféu Torneio Next Level" width="693" height="997">
+                    <div class="row align-items-center hero-overlap mt-0 pt-0">
+                        <!-- Desktop trophy -->
+                        <div class="col-md-5 d-none d-md-flex justify-content-center">
+                            <img class="hero-trophy-desktop img-fluid" src="img/trofeu.png" alt="Troféu Torneio Next Level" width="522" height="784">
                         </div>
+                        <!-- Hero text -->
+                        <div class="col-md-7 text-center text-md-start">
+                            <h1 class="hero-title fw-bold mb-3">
+                                Campeões do torneio
+                                <span class="hero-title-accent d-block position-relative">
+                                    <span class="hero-title-glow" aria-hidden="true">NEXTLEVEL 2025</span>
+                                    NEXTLEVEL 2025
+                                </span>
+                            </h1>
+                            <p class="hero-lead mb-4">A <strong>NextLevel</strong> existe para transformar ruído em decisão - para que, quando chegar a sua vez, você jogue com contexto e confiança.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 1st Place -->
+        <section class="rank-section rank-first py-4 py-lg-5">
+            <div class="container">
+                <div class="rank-first-card position-relative rounded-4 overflow-hidden p-4 p-lg-5">
+                    <img class="rank-first-watermark" src="img/team-snj.png" alt="" aria-hidden="true">
+
+                    <div class="d-flex align-items-center gap-3 mb-4 position-relative">
+                        <img class="rank-medal" src="img/medal-gold.png" alt="" width="124" height="124">
+                        <div>
+                            <p class="rank-place-label rank-gold mb-0">1 lugar</p>
+                            <h2 class="rank-team-name mb-0">Somos nós a Justiça</h2>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 g-lg-4 justify-content-center position-relative">
+                        <div class="col-6 col-sm-4 col-lg">
+                            <article class="player-card player-card--gold">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <div class="player-card__portrait">
+                                    <img src="img/player-costabile.png" alt="Costabile" width="211" height="305">
+                                </div>
+                                <div class="player-card__info">
+                                    <p class="player-card__name mb-0">Costabile</p>
+                                    <p class="player-card__country mb-0">
+                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        Brazil
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg">
+                            <article class="player-card player-card--gold">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <div class="player-card__portrait">
+                                    <img src="img/player-pipi.png" alt="PiPi" width="211" height="305">
+                                </div>
+                                <div class="player-card__info">
+                                    <p class="player-card__name mb-0">PiPi</p>
+                                    <p class="player-card__country mb-0">
+                                        <img src="img/flag-peru.png" alt="" width="19" height="12" aria-hidden="true">
+                                        Peru
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg">
+                            <article class="player-card player-card--gold">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <div class="player-card__portrait">
+                                    <img src="img/player-vitaly.png" alt="Vitaly" width="211" height="305">
+                                </div>
+                                <div class="player-card__info">
+                                    <p class="player-card__name mb-0">Vitaly</p>
+                                    <p class="player-card__country mb-0">
+                                        <img src="img/flag-peru.png" alt="" width="19" height="12" aria-hidden="true">
+                                        Peru
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg">
+                            <article class="player-card player-card--gold">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <div class="player-card__portrait">
+                                    <img src="img/player-hane.png" alt="Hane" width="211" height="305">
+                                </div>
+                                <div class="player-card__info">
+                                    <p class="player-card__name mb-0">Hane</p>
+                                    <p class="player-card__country mb-0">
+                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        Brazil
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg">
+                            <article class="player-card player-card--gold">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <div class="player-card__portrait">
+                                    <img src="img/player-blackfrath.png" alt="BlackFrath" width="211" height="305">
+                                </div>
+                                <div class="player-card__info">
+                                    <p class="player-card__name mb-0">BlackFrath</p>
+                                    <p class="player-card__country mb-0">
+                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        Brazil
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-4 position-relative">
+                        <div class="coach-badge coach-badge--gold d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
+                            <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="36" height="36" aria-hidden="true">
+                            <span class="coach-badge__name">dpms</span>
+                            <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="23" height="15" aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 2nd Place -->
+        <section class="rank-section rank-row py-4">
+            <div class="container">
+                <div class="rank-row-header">
+                    <img class="rank-medal" src="img/medal-silver.png" alt="" width="124" height="124">
+                    <div class="rank-row-header__title d-flex align-items-center gap-3">
+                        <div>
+                            <p class="rank-place-label rank-silver mb-0">2 lugar</p>
+                            <h2 class="rank-team-name mb-0">Puraka Esports</h2>
+                        </div>
+                    </div>
+                    <div class="coach-badge coach-badge--silver d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
+                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="40" height="40" aria-hidden="true">
+                        <span class="coach-badge__name">OldR</span>
+                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="21" height="14" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--silver">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/puraka-logo.png" alt="Puraka Esports">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">hFn</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--silver">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/puraka-logo.png" alt="Puraka Esports">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">DarkMago</p>
+                                <p class="player-card__country mb-0">Peru</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--silver">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/puraka-logo.png" alt="Puraka Esports">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Oscar</p>
+                                <p class="player-card__country mb-0">Bolivia</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--silver">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/puraka-logo.png" alt="Puraka Esports">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Coyote</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--silver">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/puraka-logo.png" alt="Puraka Esports">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">iSonic</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="rank-divider"><div class="rank-divider__fill"></div></div>
+            </div>
+        </section>
+
+        <!-- Section 4: 3rd Place -->
+        <section class="rank-section rank-row py-4">
+            <div class="container">
+                <div class="rank-row-header">
+                    <img class="rank-medal" src="img/bronze.png" alt="" width="61" height="61">
+                    <div class="rank-row-header__title">
+                        <p class="rank-place-label rank-bronze mb-0">3 lugar</p>
+                        <h2 class="rank-team-name mb-0">Farmadores de Aura</h2>
+                    </div>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--bronze">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="Farmadores de Aura">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Lumière</p>
+                                <p class="player-card__country mb-0">Peru</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--bronze">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="Farmadores de Aura">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Jam3s</p>
+                                <p class="player-card__country mb-0">Peru</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--bronze">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="Farmadores de Aura">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">fcr</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--bronze">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="Farmadores de Aura">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">hyko</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--bronze">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="Farmadores de Aura">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Kaffurtado</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="rank-divider"><div class="rank-divider__fill"></div></div>
+            </div>
+        </section>
+
+        <!-- Section 5: 4th Place -->
+        <section class="rank-section rank-row py-4">
+            <div class="container">
+                <div class="rank-row-header">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <div class="rank-row-header__title">
+                        <p class="rank-place-label rank-blue mb-0">4 lugar</p>
+                        <h2 class="rank-team-name mb-0">Midas Club</h2>
+                    </div>
+                    <div class="coach-badge coach-badge--blue d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
+                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="40" height="40" aria-hidden="true">
+                        <span class="coach-badge__name">Astini</span>
+                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="21" height="14" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/148px-Midas_Club_2019_allmode.png" alt="Midas Club">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">RdO</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/148px-Midas_Club_2019_allmode.png" alt="Midas Club">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">4dr</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/148px-Midas_Club_2019_allmode.png" alt="Midas Club">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">SexyFat</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/148px-Midas_Club_2019_allmode.png" alt="Midas Club">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Lelis</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/148px-Midas_Club_2019_allmode.png" alt="Midas Club">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Duster</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="rank-divider"><div class="rank-divider__fill"></div></div>
+            </div>
+        </section>
+
+        <!-- Section 6: 5th Place -->
+        <section class="rank-section rank-row py-4">
+            <div class="container">
+                <div class="rank-row-header">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <div class="rank-row-header__title">
+                        <p class="rank-place-label rank-blue mb-0">5 lugar</p>
+                        <h2 class="rank-team-name mb-0">x5 Gaming</h2>
+                    </div>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/190px-X5_Gaming_allmode.png" alt="x5 Gaming">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Summer</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/190px-X5_Gaming_allmode.png" alt="x5 Gaming">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">mini</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/190px-X5_Gaming_allmode.png" alt="x5 Gaming">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Hermit</p>
+                                <p class="player-card__country mb-0">Argentina</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/190px-X5_Gaming_allmode.png" alt="x5 Gaming">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">r3donatello</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/190px-X5_Gaming_allmode.png" alt="x5 Gaming">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Yanbura</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="rank-divider"><div class="rank-divider__fill"></div></div>
+            </div>
+        </section>
+
+        <!-- Section 7: 6th Place -->
+        <section class="rank-section rank-row py-4 pb-5">
+            <div class="container">
+                <div class="rank-row-header">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <div class="rank-row-header__title">
+                        <p class="rank-place-label rank-blue mb-0">6 lugar</p>
+                        <h2 class="rank-team-name mb-0">x9 in flames</h2>
+                    </div>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="x9 in flames">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Summer</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="x9 in flames">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">mini</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="x9 in flames">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Hermit</p>
+                                <p class="player-card__country mb-0">Argentina</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="x9 in flames">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">r3donatello</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg">
+                        <article class="player-card player-card--blue">
+                            <div class="player-card__portrait d-flex align-items-center justify-content-center">
+                                <img class="player-card__hero-logo" src="img/aura-logo.png" alt="x9 in flames">
+                            </div>
+                            <div class="player-card__info">
+                                <p class="player-card__name mb-0">Yanbura</p>
+                                <p class="player-card__country mb-0">Brazil</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
