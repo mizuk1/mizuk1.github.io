@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tournament Champions — 1st Edition</title>
+    <title>Torneio Next Level</title>
 
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-dark header-bg py-3">
             <div class="container">
                 <a href="#">
-                    <img class="header-logo img-fluid" src="img/LOGO-TORNEIO-NEXT-LEVEL.png" alt="Torneio Next Level" width="284" height="56">
+                    <img class="header-logo img-fluid" src="img/LOGO-TORNEIO-NEXT-LEVEL.png" alt="Torneio Next Level">
                 </a>
             </div>
         </nav>
@@ -33,34 +33,58 @@
 
     <!-- ========== MAIN ========== -->
     <main>
-
+        
         <!-- Section 1: Hero / Intro -->
-        <section class="hero-section text-white py-4 py-xl-5">
-            <img class="hero-bg-glow" src="img/glow-ellipse.png" alt="" aria-hidden="true">
-            <img class="hero-trophy-bg d-none d-md-block" src="img/ouro02.png" alt="" aria-hidden="true">
-            <div class="container position-relative">
-                <div class="border rounded border-0 d-flex flex-column justify-content-center hero-container p-4 py-5">
-                    <!-- Mobile trophy -->
-                    <img class="img-fluid object-fit-contain d-md-none w-100 mb-0" src="img/trofeu.png" alt="Troféu Torneio Next Level" width="693" height="997">
-                    <div class="row align-items-center hero-overlap mt-0 pt-0">
-                        <!-- Desktop trophy -->
-                        <div class="col-md-5 d-none d-md-flex justify-content-center">
-                            <img class="hero-trophy-desktop img-fluid" src="img/trofeu.png" alt="Troféu Torneio Next Level" width="522" height="784">
-                        </div>
-                        <!-- Hero text -->
-                        <div class="col-md-7 text-center text-md-start">
-                            <h1 class="hero-title fw-bold mb-3">
-                                Campeões do torneio
-                                <span class="hero-title-accent d-block position-relative">
-                                    <span class="hero-title-glow" aria-hidden="true">NEXTLEVEL 2025</span>
-                                    NEXTLEVEL 2025
-                                </span>
-                            </h1>
-                            <p class="hero-lead mb-4">A <strong>NextLevel</strong> existe para transformar ruído em decisão - para que, quando chegar a sua vez, você jogue com contexto e confiança.</p>
-                        </div>
-                    </div>
+        <section class="hero-section text-white">
+
+            <!-- Mobile -->
+            <img class="hero-trophy d-md-none" src="img/trofeu_azul2.png" alt="Trofeu Torneio Next Level">
+
+            <div class="hero-overlay d-md-none">
+                <div class="container text-center">
+                    <h1 class="hero-title fw-bold mb-3">
+                        Campeões do torneio
+                        <span class="hero-title-accent d-block position-relative">
+                            <span class="hero-title-glow" aria-hidden="true">NEXTLEVEL 2025</span>
+                            NEXTLEVEL 2025
+                        </span>
+                    </h1>
                 </div>
             </div>
+
+            <!-- Desktop -->
+            <div class="container position-relative">
+                <div class="hero-desktop d-none d-md-flex align-items-center">
+
+                    <div class="hero-trophy-col flex-shrink-0">
+                        <!-- Desktop Spotlight -->
+                        <div class="spotlight_swivel d-none d-md-block">
+                            <div class="lamp"></div>
+                        </div>
+                        <img
+                            class="hero-trophy-desktop"
+                            src="img/trofeu.png"
+                            alt="Trofeu Torneio Next Level">
+                    </div>
+
+                    <div class="hero-text-col">
+                        <h1 class="hero-title fw-bold mb-3">
+                            Campeões do torneio
+                            <span class="hero-title-accent d-block position-relative">
+                                <span class="hero-title-glow" aria-hidden="true">NEXTLEVEL 2025</span>
+                                NEXTLEVEL 2025
+                            </span>
+                        </h1>
+
+                        <p class="hero-lead mb-0">
+                            A <strong>NextLevel</strong> existe para transformar ruído em decisão -
+                            para que, quando chegar a sua vez, você jogue com contexto e confiança.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
         <!-- Section 2: 1st Place -->
@@ -70,7 +94,7 @@
                     <img class="rank-first-watermark" src="img/team-snj.png" alt="" aria-hidden="true">
 
                     <div class="d-flex align-items-center gap-3 mb-4 position-relative">
-                        <img class="rank-medal" src="img/medal-gold.png" alt="" width="124" height="124">
+                        <img class="rank-medal" src="img/medal-gold.png" alt="">
                         <div>
                             <p class="rank-place-label rank-gold mb-0">1 lugar</p>
                             <h2 class="rank-team-name mb-0">Somos nós a Justiça</h2>
@@ -80,14 +104,14 @@
                     <div class="row g-3 g-lg-4 justify-content-center position-relative">
                         <div class="col-6 col-sm-4 col-lg">
                             <article class="player-card player-card--gold">
-                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ">
                                 <div class="player-card__portrait">
-                                    <img src="img/player-costabile.png" alt="Costabile" width="211" height="305">
+                                    <img src="img/player-costabile.png" alt="Costabile">
                                 </div>
                                 <div class="player-card__info">
                                     <p class="player-card__name mb-0">Costabile</p>
                                     <p class="player-card__country mb-0">
-                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        <img src="img/flag-brazil.png" alt="" aria-hidden="true">
                                         Brazil
                                     </p>
                                 </div>
@@ -95,14 +119,14 @@
                         </div>
                         <div class="col-6 col-sm-4 col-lg">
                             <article class="player-card player-card--gold">
-                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ">
                                 <div class="player-card__portrait">
-                                    <img src="img/player-pipi.png" alt="PiPi" width="211" height="305">
+                                    <img src="img/player-pipi.png" alt="PiPi">
                                 </div>
                                 <div class="player-card__info">
                                     <p class="player-card__name mb-0">PiPi</p>
                                     <p class="player-card__country mb-0">
-                                        <img src="img/flag-peru.png" alt="" width="19" height="12" aria-hidden="true">
+                                        <img src="img/flag-peru.png" alt="" aria-hidden="true">
                                         Peru
                                     </p>
                                 </div>
@@ -110,14 +134,14 @@
                         </div>
                         <div class="col-6 col-sm-4 col-lg">
                             <article class="player-card player-card--gold">
-                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ">
                                 <div class="player-card__portrait">
-                                    <img src="img/player-vitaly.png" alt="Vitaly" width="211" height="305">
+                                    <img src="img/player-vitaly.png" alt="Vitaly">
                                 </div>
                                 <div class="player-card__info">
                                     <p class="player-card__name mb-0">Vitaly</p>
                                     <p class="player-card__country mb-0">
-                                        <img src="img/flag-peru.png" alt="" width="19" height="12" aria-hidden="true">
+                                        <img src="img/flag-peru.png" alt="" aria-hidden="true">
                                         Peru
                                     </p>
                                 </div>
@@ -125,14 +149,14 @@
                         </div>
                         <div class="col-6 col-sm-4 col-lg">
                             <article class="player-card player-card--gold">
-                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ">
                                 <div class="player-card__portrait">
-                                    <img src="img/player-hane.png" alt="Hane" width="211" height="305">
+                                    <img src="img/player-hane.png" alt="Hane">
                                 </div>
                                 <div class="player-card__info">
                                     <p class="player-card__name mb-0">Hane</p>
                                     <p class="player-card__country mb-0">
-                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        <img src="img/flag-brazil.png" alt="" aria-hidden="true">
                                         Brazil
                                     </p>
                                 </div>
@@ -140,14 +164,14 @@
                         </div>
                         <div class="col-6 col-sm-4 col-lg">
                             <article class="player-card player-card--gold">
-                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ" width="91" height="73">
+                                <img class="player-card__team-logo" src="img/LOGO-01.png" alt="SNJ">
                                 <div class="player-card__portrait">
-                                    <img src="img/player-blackfrath.png" alt="BlackFrath" width="211" height="305">
+                                    <img src="img/player-blackfrath.png" alt="BlackFrath">
                                 </div>
                                 <div class="player-card__info">
                                     <p class="player-card__name mb-0">BlackFrath</p>
                                     <p class="player-card__country mb-0">
-                                        <img src="img/flag-brazil.png" alt="" width="19" height="12" aria-hidden="true">
+                                        <img src="img/flag-brazil.png" alt="" aria-hidden="true">
                                         Brazil
                                     </p>
                                 </div>
@@ -157,9 +181,9 @@
 
                     <div class="d-flex justify-content-center mt-4 position-relative">
                         <div class="coach-badge coach-badge--gold d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
-                            <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="36" height="36" aria-hidden="true">
+                            <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" aria-hidden="true">
                             <span class="coach-badge__name">dpms</span>
-                            <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="23" height="15" aria-hidden="true">
+                            <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" aria-hidden="true">
                         </div>
                     </div>
                 </div>
@@ -170,7 +194,7 @@
         <section class="rank-section rank-row py-4">
             <div class="container">
                 <div class="rank-row-header">
-                    <img class="rank-medal" src="img/medal-silver.png" alt="" width="124" height="124">
+                    <img class="rank-medal" src="img/medal-silver.png" alt="">
                     <div class="rank-row-header__title d-flex align-items-center gap-3">
                         <div>
                             <p class="rank-place-label rank-silver mb-0">2 lugar</p>
@@ -178,9 +202,9 @@
                         </div>
                     </div>
                     <div class="coach-badge coach-badge--silver d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
-                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="40" height="40" aria-hidden="true">
+                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" aria-hidden="true">
                         <span class="coach-badge__name">OldR</span>
-                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="21" height="14" aria-hidden="true">
+                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" aria-hidden="true">
                     </div>
                 </div>
                 <div class="row g-3 justify-content-center">
@@ -248,7 +272,7 @@
         <section class="rank-section rank-row py-4">
             <div class="container">
                 <div class="rank-row-header">
-                    <img class="rank-medal" src="img/bronze.png" alt="" width="61" height="61">
+                    <img class="rank-medal" src="img/bronze.png" alt="">
                     <div class="rank-row-header__title">
                         <p class="rank-place-label rank-bronze mb-0">3 lugar</p>
                         <h2 class="rank-team-name mb-0">Farmadores de Aura</h2>
@@ -319,15 +343,15 @@
         <section class="rank-section rank-row py-4">
             <div class="container">
                 <div class="rank-row-header">
-                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="">
                     <div class="rank-row-header__title">
                         <p class="rank-place-label rank-blue mb-0">4 lugar</p>
                         <h2 class="rank-team-name mb-0">Midas Club</h2>
                     </div>
                     <div class="coach-badge coach-badge--blue d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1">
-                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" width="40" height="40" aria-hidden="true">
+                        <img class="coach-badge__avatar rounded-circle" src="img/flag-brazil.png" alt="" aria-hidden="true">
                         <span class="coach-badge__name">Astini</span>
-                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" width="21" height="14" aria-hidden="true">
+                        <img class="coach-badge__flag" src="img/flag-brazil.png" alt="" aria-hidden="true">
                     </div>
                 </div>
                 <div class="row g-3 justify-content-center">
@@ -395,7 +419,7 @@
         <section class="rank-section rank-row py-4">
             <div class="container">
                 <div class="rank-row-header">
-                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="">
                     <div class="rank-row-header__title">
                         <p class="rank-place-label rank-blue mb-0">5 lugar</p>
                         <h2 class="rank-team-name mb-0">x5 Gaming</h2>
@@ -466,7 +490,7 @@
         <section class="rank-section rank-row py-4 pb-5">
             <div class="container">
                 <div class="rank-row-header">
-                    <img class="rank-medal" src="img/medal-blue.png" alt="" width="61" height="61">
+                    <img class="rank-medal" src="img/medal-blue.png" alt="">
                     <div class="rank-row-header__title">
                         <p class="rank-place-label rank-blue mb-0">6 lugar</p>
                         <h2 class="rank-team-name mb-0">x9 in flames</h2>
