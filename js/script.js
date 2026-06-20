@@ -51,5 +51,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
         starsContainer.appendChild(star);
     }
+
+    const beamContainer = document.querySelector('.spotlight-container');
+    if (beamContainer) {
+        const beamCount = 20;
+
+        for (let i = 0; i < beamCount; i++) {
+            const beam = document.createElement('div');
+            beam.className = 'spotlight_swivel';
+
+            const rotMin = -(Math.random() * 80 + 10);
+            const rotMax = Math.random() * 80 + 10;
+            const delay = -(Math.random() * 15).toFixed(1);
+            const opacity = (Math.random() * 0.5 + 0.2).toFixed(2);
+            const lampWidth = Math.floor(Math.random() * 60 + 30);
+            const lampHeight = Math.floor(Math.random() * 500 + 400);
+
+            beam.style.setProperty('--rot-min', rotMin + 'deg');
+            beam.style.setProperty('--rot-max', rotMax + 'deg');
+            beam.style.setProperty('--beam-delay', delay + 's');
+            beam.style.setProperty('--beam-opacity', opacity);
+            beam.style.setProperty('--lamp-width', lampWidth + 'px');
+            beam.style.setProperty('--lamp-height', lampHeight + 'px');
+
+            const lamp = document.createElement('div');
+            lamp.className = 'lamp';
+            beam.appendChild(lamp);
+            beamContainer.appendChild(beam);
+        }
+    }
 });
 

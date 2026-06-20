@@ -237,6 +237,13 @@ main {
     overflow-x: clip;
 }
 
+.spotlight-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .spotlight_swivel {
     position: absolute;
 
@@ -252,42 +259,9 @@ main {
     pointer-events: none;
     z-index: 0;
 
-    animation: rotate_spotlight 12s ease-in-out infinite;
-}
-
-.spotlight_swivel--2 {
-    animation-delay: -1.5s;
-    opacity: .85;
-}
-
-.spotlight_swivel--3 {
-    animation-delay: -3s;
-    opacity: .7;
-}
-
-.spotlight_swivel--4 {
-    animation-delay: -4.5s;
-    opacity: .6;
-}
-
-.spotlight_swivel--5 {
-    animation-delay: -6s;
-    opacity: .5;
-}
-
-.spotlight_swivel--6 {
-    animation-delay: -7.5s;
-    opacity: .45;
-}
-
-.spotlight_swivel--7 {
-    animation-delay: -9s;
-    opacity: .4;
-}
-
-.spotlight_swivel--8 {
-    animation-delay: -10.5s;
-    opacity: .35;
+    animation: rotate_spotlight var(--beam-duration, 12s) ease-in-out infinite;
+    animation-delay: var(--beam-delay, 0s);
+    opacity: var(--beam-opacity, 1);
 }
 
 .lamp {
@@ -296,8 +270,8 @@ main {
     left: 50%;
     bottom: 70px;
 
-    width: 55px;
-    height: 700px;
+    width: var(--lamp-width, 55px);
+    height: var(--lamp-height, 700px);
 
     transform: translateX(-50%);
 
@@ -324,15 +298,15 @@ main {
 
 @keyframes rotate_spotlight {
     0% {
-        transform: translateX(-50%) rotate(-70deg);
+        transform: translateX(-50%) rotate(var(--rot-min, -70deg));
     }
 
     50% {
-        transform: translateX(-50%) rotate(70deg);
+        transform: translateX(-50%) rotate(var(--rot-max, 70deg));
     }
 
     100% {
-        transform: translateX(-50%) rotate(-70deg);
+        transform: translateX(-50%) rotate(var(--rot-min, -70deg));
     }
 }
 
@@ -447,6 +421,14 @@ main {
     background: linear-gradient(180deg, rgba(255, 199, 2, 0.3) 9%, rgba(255, 199, 2, 0) 100%);
 }
 
+.player-card--gold .player-card__portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 20%, #FFAF02 100%);
+    pointer-events: none;
+}
+
 .player-card--silver .player-card__portrait {
     border: 2px solid #cacaca;
     background: linear-gradient(180deg, rgba(202, 202, 202, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
@@ -482,6 +464,10 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .player-card--gold .player-card__name {
@@ -497,6 +483,11 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.35rem;
+}
+
+.player-card__country img {
+    height: 1em;
+    width: auto;
 }
 
 .player-card--silver .player-card__name,
