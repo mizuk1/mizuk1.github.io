@@ -8,6 +8,10 @@ Base spotlight concept from http://www.rwe-uk.com/blog/comments/rich_css_spotlig
 Lamp effect supported by Chrome and Safari, but not Firefox. Spotlight effect supported in all three.
 */
 
+html {
+    overflow-x: clip;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -52,7 +56,7 @@ main {
 /* ---------- Hero ---------- */
 .hero-section {
     position: relative;
-    overflow: visible;
+    overflow-x: clip;
     padding: 0 0;
 }
 
@@ -215,7 +219,7 @@ main {
 
 .hero-section {
     position: relative;
-    overflow: visible;
+    overflow-x: clip;
 }
 
 .spotlight_swivel {
