@@ -20,6 +20,7 @@ main {
 .header-bg {
     background: linear-gradient(#000f16, rgba(0, 26, 39, 0) 100%);
     position: relative;
+    z-index: 3;
 }
 
 .header-bg::before {
@@ -51,7 +52,7 @@ main {
 /* ---------- Hero ---------- */
 .hero-section {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 0 0;
 }
 
@@ -76,31 +77,18 @@ main {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.1;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    line-height: 1.3;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-title-accent {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    color: var(--bs-secondary);
-    position: relative;
-}
-
-.hero-title-glow {
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    color: var(--bs-secondary);
-    filter: blur(6px);
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
+    font-weight: 900;
 }
 
 .hero-lead {
     font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: 400;
+    font-weight: 100;
     max-width: 557px;
     margin-left: auto;
     margin-right: auto;
@@ -112,14 +100,14 @@ main {
 
 /* ---------- Hero Desktop (md+) ---------- */
 .hero-desktop {
-    min-height: 520px;
+    min-height: 700px;
     padding: 0 2rem;
     gap: 2rem;
 }
 
 .hero-trophy-col {
     position: relative;
-    width: 45%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -131,7 +119,7 @@ main {
     display: block;
     max-width: 100%;
     height: auto;
-    max-height: 520px;
+    max-height: 700px;
 }
 
 .hero-text-col {
@@ -147,7 +135,7 @@ main {
 @media (min-width: 992px) {
     .hero-desktop {
         padding: 0 4rem;
-        gap: 3rem;
+        gap: 0rem;
     }
 }
 
@@ -157,21 +145,87 @@ main {
     }
 }
 
+/* ---------- Hero Stars ---------- */
+
+.hero-stars {
+    position: absolute;
+    top: 0;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    z-index: -1;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+}
+
+.star {
+    position: absolute;
+    width: var(--star-size);
+    height: var(--star-size);
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+    filter: blur(1.5px);
+    box-shadow: 
+        0 0 2px currentColor,
+        0 0 4px currentColor,
+        0 0 8px currentColor;
+}
+
+.star::before,
+.star::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+    border-radius: 2px;
+    box-shadow: 
+        0 0 2px currentColor,
+        0 0 4px currentColor;
+}
+
+.star::before {
+    width: calc(var(--star-size) * 0.15);
+    height: calc(var(--star-size) * 3);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.star::after {
+    width: calc(var(--star-size) * 0.15);
+    height: calc(var(--star-size) * 3);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(0.8);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}
+
 /* ---------- Hero Desktop Spotlight ---------- */
 
 .hero-section {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .spotlight_swivel {
     position: absolute;
 
     left: 50%;
-    bottom: -100px;
+    bottom: 40px;
 
     width: 200px;
-    height: 1400px;
+    height: 1800px;
 
     transform: translateX(-50%);
     transform-origin: center bottom;
@@ -179,25 +233,60 @@ main {
     pointer-events: none;
     z-index: 0;
 
-    animation: rotate_spotlight 6s ease-in-out infinite;
+    animation: rotate_spotlight 12s ease-in-out infinite;
+}
+
+.spotlight_swivel--2 {
+    animation-delay: -1.5s;
+    opacity: .85;
+}
+
+.spotlight_swivel--3 {
+    animation-delay: -3s;
+    opacity: .7;
+}
+
+.spotlight_swivel--4 {
+    animation-delay: -4.5s;
+    opacity: .6;
+}
+
+.spotlight_swivel--5 {
+    animation-delay: -6s;
+    opacity: .5;
+}
+
+.spotlight_swivel--6 {
+    animation-delay: -7.5s;
+    opacity: .45;
+}
+
+.spotlight_swivel--7 {
+    animation-delay: -9s;
+    opacity: .4;
+}
+
+.spotlight_swivel--8 {
+    animation-delay: -10.5s;
+    opacity: .35;
 }
 
 .lamp {
     position: absolute;
 
     left: 50%;
-    bottom: 0;
+    bottom: 70px;
 
-    width: 100px;
-    height: 1400px;
+    width: 55px;
+    height: 700px;
 
     transform: translateX(-50%);
 
     background: radial-gradient(
-        ellipse at center,
-        rgba(82,116,168,.55) 0%,
-        rgba(82,116,168,.30) 20%,
-        rgba(82,116,168,.12) 45%,
+        ellipse at bottom,
+        rgba(31,181,253,.55) 0%,
+        rgba(31,181,253,.30) 20%,
+        rgba(31,181,253,.12) 45%,
         transparent 75%
     );
 
@@ -216,15 +305,15 @@ main {
 
 @keyframes rotate_spotlight {
     0% {
-        transform: translateX(-50%) rotate(-12deg);
+        transform: translateX(-50%) rotate(-70deg);
     }
 
     50% {
-        transform: translateX(-50%) rotate(12deg);
+        transform: translateX(-50%) rotate(70deg);
     }
 
     100% {
-        transform: translateX(-50%) rotate(-12deg);
+        transform: translateX(-50%) rotate(-70deg);
     }
 }
 
@@ -290,6 +379,14 @@ main {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 2%, rgba(0, 0, 0, 0.66) 97%);
     max-width: 1220px;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .rank-first-card {
+        margin-top: -170px;
+        position: relative;
+        z-index: 10;
+    }
 }
 
 .rank-first-watermark {
