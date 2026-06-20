@@ -166,15 +166,13 @@ main {
 
 .star {
     position: absolute;
-    width: var(--star-size);
-    height: var(--star-size);
+    width: calc(var(--star-size) * 4);
+    height: calc(var(--star-size) * 4);
     border-radius: 50%;
     animation: twinkle 3s ease-in-out infinite;
-    filter: blur(1.5px);
-    box-shadow: 
-        0 0 2px currentColor,
-        0 0 4px currentColor,
-        0 0 8px currentColor;
+    background: radial-gradient(circle, currentColor 0%, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.08) 40%, transparent 70%) !important;
+    filter: blur(0.6px);
+    box-shadow: none;
 }
 
 .star::before,
@@ -182,26 +180,43 @@ main {
     content: '';
     position: absolute;
     background: currentColor;
-    border-radius: 2px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     box-shadow: 
-        0 0 2px currentColor,
-        0 0 4px currentColor;
+        0 0 6px currentColor,
+        0 0 14px currentColor,
+        0 0 28px currentColor,
+        0 0 42px currentColor;
+    filter: blur(0.4px);
 }
 
 .star::before {
-    width: calc(var(--star-size) * 0.15);
-    height: calc(var(--star-size) * 3);
+    width: calc(var(--star-size) * 0.6);
+    height: calc(var(--star-size) * 6);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .star::after {
-    width: calc(var(--star-size) * 0.15);
-    height: calc(var(--star-size) * 3);
+    width: calc(var(--star-size) * 0.6);
+    height: calc(var(--star-size) * 6);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.star--distant {
+    width: var(--star-size);
+    height: var(--star-size);
+    background: currentColor !important;
+    border-radius: 50%;
+    filter: blur(0.4px);
+    box-shadow: 0 0 3px currentColor, 0 0 6px currentColor;
+}
+
+.star--distant::before,
+.star--distant::after {
+    display: none;
 }
 
 @keyframes twinkle {
