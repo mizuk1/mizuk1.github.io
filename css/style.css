@@ -411,6 +411,7 @@ main {
 
 .player-card__portrait {
     width: 100%;
+    aspect-ratio: 3 / 4;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -446,7 +447,7 @@ main {
 
 .player-card__portrait img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: top center;
@@ -512,79 +513,294 @@ main {
     gap: 0.35rem;
 }
 
-.player-card__portrait .player-card__hero-logo {
-    width: 55%;
-    height: auto;
-    margin: 1.5rem auto;
-    display: block;
-}
-
-.player-card__portrait.d-flex {
-    min-height: 180px;
-}
-
-@media (min-width: 576px) {
-    .player-card__portrait.d-flex {
-        min-height: 225px;
-    }
-}
-
 /* ---------- Coach Badge ---------- */
 .coach-badge {
     background: rgba(0, 0, 0, 0.5);
     font-size: 1.375rem;
     font-weight: 700;
+    border-radius: 999px;
+    padding: 0;
+    overflow: hidden;
+    height: 40px;
+    position: relative;
+    border: none;
 }
 
-.coach-badge--gold { border: 1px solid #ffc702; }
-.coach-badge--silver { border: 1px solid #cacaca; }
-.coach-badge--blue { border: 1px solid var(--bs-secondary); }
-
-.coach-badge__avatar {
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
+.coach-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
+
+.coach-badge--gold::before { background: linear-gradient(to right, #ffc702, transparent); }
+.coach-badge--silver::before { background: linear-gradient(to right, #cacaca, transparent); }
+.coach-badge--blue::before { background: linear-gradient(to right, var(--bs-secondary), transparent); }
 
 .coach-badge__flag {
-    width: 23px;
-    height: auto;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: -1px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
 }
 
-/* ---------- Rank Row (2nd–6th) ---------- */
-.rank-row-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+.coach-badge__name {
+    padding-right: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
-.rank-row-header .rank-medal {
-    width: 61px;
-    height: 61px;
+/* ---------- Team Card (2nd–6th, same layout as 1st) ---------- */
+.rank-team-card {
+    max-width: 1220px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.rank-row-header__title {
-    flex: 1;
-    min-width: 200px;
+.rank-team-card .rank-first-watermark {
+    opacity: 0.08;
 }
 
-.rank-row .rank-place-label {
-    font-size: 1.5rem;
+.rank-team-card--silver {
+    border-color: rgba(202, 202, 202, 0.2);
 }
 
-.rank-row .rank-team-name {
-    font-size: 2rem;
+.rank-team-card--bronze {
+    border-color: rgba(223, 139, 65, 0.2);
 }
 
-@media (min-width: 992px) {
-    .rank-row .rank-place-label {
-        font-size: 2.5rem;
+.rank-team-card--blue {
+    border-color: rgba(31, 181, 253, 0.2);
+}
+
+.rank-team-card .player-card__portrait {
+    border-radius: 20px;
+}
+
+.rank-team-card .player-card__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.rank-team-card .player-card__info .player-card__name {
+    position: relative;
+    z-index: 2;
+}
+
+.rank-team-card .player-card__info .player-card__country {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------- Mobile Team Layout (below MD) ---------- */
+@media (max-width: 767.98px) {
+    .rank-first-card,
+    .rank-team-card {
+        padding: 1rem;
     }
 
-    .rank-row .rank-team-name {
-        font-size: 2rem;
+    .rank-section .d-flex.align-items-center {
+        flex-wrap: wrap;
+    }
+
+    .rank-medal {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rank-first .rank-medal {
+        width: 56px;
+        height: 56px;
+    }
+
+    .rank-place-label {
+        font-size: 1rem;
+    }
+
+    .rank-first .rank-place-label {
+        font-size: 1.25rem;
+    }
+
+    .rank-team-name {
+        font-size: 1.125rem;
+    }
+
+    .rank-first .rank-team-name {
+        font-size: 1.25rem;
+    }
+
+    .rank-section .coach-badge {
+        display: none !important;
+    }
+
+    .rank-section .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0.75rem;
+    }
+
+    .rank-section .row > [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .player-card__coach-col {
+        display: block !important;
+    }
+
+    .player-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .player-card:last-child {
+        border-bottom: none;
+    }
+
+    .player-card__team-logo {
+        display: none;
+    }
+
+    .player-card__portrait {
+        width: auto;
+        height: auto;
+        min-width: 0;
+        aspect-ratio: auto;
+        border-radius: 0;
+        border: none;
+        background: none;
+        overflow: visible;
+        margin-right: 0;
+    }
+
+    .player-card__portrait::after {
+        display: none;
+    }
+
+    .player-card__portrait > img {
+        display: none;
+    }
+
+    .player-card--gold .player-card__portrait {
+        border: none;
+        background: none;
+    }
+
+    .player-card--silver .player-card__portrait,
+    .player-card--bronze .player-card__portrait,
+    .player-card--blue .player-card__portrait {
+        border: none;
+        background: none;
+    }
+
+    .player-card__info {
+        display: flex !important;
+        position: static;
+        background: none;
+        padding: 0;
+        min-height: 0;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .player-card--gold .player-card__info {
+        display: flex !important;
+        background: none;
+        position: static;
+        padding: 0;
+        min-height: 0;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .player-card__name {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .player-card--gold .player-card__name {
+        color: #fff;
+    }
+
+    .player-card__country {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0 !important;
+        margin: 0;
+        order: -1;
+        white-space: nowrap;
+    }
+
+    .player-card__country img {
+        height: 16px;
+        width: auto;
+    }
+
+    .player-card--coach {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: none;
+        margin-top: 0.25rem;
+        padding-top: 0.75rem;
+    }
+
+    .player-card--coach .player-card__name::after {
+        content: " (Coach)";
+        font-size: 0.75rem;
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
+    .rank-team-card .player-card__info {
+        position: static;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        width: auto;
+        transform: none;
+        margin-left: 0;
+        background: none;
+        padding: 0;
+    }
+
+    .rank-team-card .player-card__info .player-card__name {
+        position: static;
+    }
+
+    .rank-team-card .player-card__info .player-card__country {
+        position: static;
     }
 }
